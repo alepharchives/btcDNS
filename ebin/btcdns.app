@@ -1,0 +1,9 @@
+{application,btcdns,
+             [{description,[]},
+              {vsn,"1.0"},
+              {modules,[btcdns_app,btcdns_db,btcdns_server,btcdns_sup,
+                        btcdns_util,btcdns_worker]},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{btcdns_app,[]}},
+              {env,[]}]}.
