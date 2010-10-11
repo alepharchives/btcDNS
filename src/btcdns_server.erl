@@ -12,6 +12,8 @@
   s % socket
 }).
 
+%% PUBLIC APi
+
 stop() ->
   gen_server:call(?MODULE, stop).
 
