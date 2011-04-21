@@ -12,7 +12,7 @@ is_valid_query(Query) ->
 	Response = btcdns_util:make_rec(Query, ?HEADER(Query, ?NOTIMP)),
 	{error, Response}.
 
-is_interesting(#dns_rec{qdllist=Questions} = Query) when is_list(Questions) ->
+is_interesting(#dns_rec{qdlist=Questions} = Query) when is_list(Questions) ->
   %% for now we only support one question
   [Question | _Tail] = Query#dns_rec.qdlist,
   case sets:is_element(Question#dns_query.domain, ?SLD_SERVED) of
